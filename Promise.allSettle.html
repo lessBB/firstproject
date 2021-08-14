@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const p1 = new Promise((resolve,reject) => {
+            console.log("开始请求A数据");
+            setTimeout(() => {
+                try{
+                    const dataA = {
+                        name:"laowang"
+                    }
+                    console.log("A数据请求成功！");
+                    resolve(dataA);
+                }catch(e){
+                    console.log("数据A请求失败!");
+                    reject(e);
+                }
+            },2000)
+        });
+        const p2 = new Promise((resolve,reject) => {
+            console.log("开始请求b数据");
+            setTimeout(() => {
+                try{
+                    const dataB = {
+                        name:"laowang"
+                    }
+                    console.log("B数据请求成功！");
+                    resolve(dataB);
+                }catch(e){
+                    console.log("数据B请求失败!");
+                    reject(e);
+                }
+            },3000)
+        });
+        const p3 = new Promise((resolve,reject) => {
+            console.log("开始请求c数据");
+            setTimeout(() => {
+                try{
+                    const dataC = {
+                        name:"laowang"
+                    }
+                    console.log("C数据请求成功！");
+                    resolve(dataC);
+                }catch(e){
+                    console.log("数据C请求失败!");
+                    reject(e);
+                }
+            },1000)
+        })
+
+        const re = Promise.allSettled([p1,p2,p3]);
+        console.log(re);
+    </script>
+</body>
+</html>
