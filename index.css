@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #register{
     width: 300px;
     height: 300px;
@@ -7,4 +8,10 @@
     width: 200px;
     height: 200px;
     background-color: black;
+=======
+#box{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+>>>>>>> 9c7a8eca753a9f18aee52c33a73454be87b711cd
 }
